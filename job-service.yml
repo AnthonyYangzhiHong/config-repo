@@ -1,5 +1,5 @@
 server:
-  port: 8082
+  port: ${PORT:8082}
 
 spring:
   datasource:
@@ -54,4 +54,7 @@ feign:
 
 logging:
   pattern:
-    level: "%5p [${spring.application.name:},%X{traceId:-},%X{spanId:-}]" 
+    level: "%5p [${spring.application.name:},%X{traceId:-},%X{spanId:-}]"
+
+test:
+  property: "Config server is working!" 
